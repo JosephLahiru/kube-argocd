@@ -55,6 +55,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add deployment.yaml
+          git add .
           git commit -m "Update image tag to ${GITHUB_SHA}"
           git push origin main

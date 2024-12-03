@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: kube-argocd-container
-          image: kube-argocd:8ae2780def43f60e749c1db113447129fe35dcba
+          image: kube-argocd:61cd8b432f83b3c4f0112ec02f076ceab4e07370
           ports:
             - containerPort: 5000
 ---

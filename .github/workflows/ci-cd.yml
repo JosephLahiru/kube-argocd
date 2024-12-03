@@ -49,7 +49,8 @@ jobs:
           docker push ${{ secrets.DOCKER_REGISTRY }}/kube-argocd:${{ github.sha }}
 
       - name: Update deployment YAML
-        run: sed -i "s/{{TAG}}/${{ github.sha }}/g" deployment.yaml
+        run: |
+          sed -i 's|image: kube-argocd:.*|image: kube-argocd:${{ github.sha }}|g' deployment.yaml
 
       - name: Commit and push changes
         run: |

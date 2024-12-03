@@ -13,7 +13,7 @@ spec:
         app: kube-argocd
     spec:
       containers:
-        - name: flask-container
+        - name: kube-argocd-container
           image: kube-argocd:{{TAG}}
           ports:
             - containerPort: 5000
@@ -21,7 +21,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: flask-service
+  name: kube-argocd-service
 spec:
   selector:
     app: kube-argocd

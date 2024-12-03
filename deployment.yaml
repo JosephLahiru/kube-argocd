@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: kube-argocd-container
-          image: kube-argocd:{{TAG}}
+          image: kube-argocd:latest
           ports:
             - containerPort: 5000
 ---

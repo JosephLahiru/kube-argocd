@@ -50,7 +50,7 @@ jobs:
 
       - name: Update deployment YAML
         run: |
-          sed -i 's|image: kube-argocd:.*|image: kube-argocd:${{ github.sha }}|g' deployment.yaml
+          sed -i 's|image: lbdevopscti/kube-argocd:.*|image: lbdevopscti/kube-argocd:${{ github.sha }}|g' deployment.yaml
 
       - name: Commit and push changes
         run: |
